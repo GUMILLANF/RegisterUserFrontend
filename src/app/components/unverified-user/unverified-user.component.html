@@ -1,0 +1,15 @@
+<h3>Usuário {{ user.login }} não validado</h3>
+
+<button type="button" class="btn btn-primary" (click)="enableEmail()">Reenviar Email</button>
+
+<div *ngIf="informEmail" style="margin-top: 10px;">
+  <form class="form-inline">
+    <div class="form-group mx-sm-3 mb-2">
+      <label for="email">Email</label>
+      <span style="color: red; font-size: 23px;" *ngIf="emailValidate.invalid"> *</span>
+      <input type="text" class="form-control" id="email" name="email" [(ngModel)]="user.email" #emailValidate="ngModel"
+        placeholder="Digite o Email" required="true">
+    </div>
+    <button type="button" (click)="resendEmail()" class="btn btn-success mb-2">Enviar</button>
+  </form>
+</div>

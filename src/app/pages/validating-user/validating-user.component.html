@@ -1,0 +1,9 @@
+<div *ngIf="enablePage">
+    <h1>Usuário {{ login }} Validado</h1>
+    <br />
+    <br />
+    <p>Você será redirecionado para a tela inicial em {{ seconds }} segundos.</p>
+</div>
+<div *ngIf="!enablePage">
+    <h2>{{ message }}</h2>
+</div>

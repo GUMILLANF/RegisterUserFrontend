@@ -1,0 +1,26 @@
+<form>
+  <div id="log">
+
+    <div class="form-group">
+      <label for="login">Login:</label>
+      <input type="text" class="form-control" id="login" name="login" placeholder="Informe o Login"
+        [(ngModel)]="user.login" #userLogin="ngModel" required />
+      <div *ngIf="userLogin.invalid && !userLogin.untouched" class="alert alert-danger">
+        Login deve ser informado
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="passw">Senha:</label>
+      <input type="password" class="form-control" id="passw" name="passw" placeholder="Informe a Senha"
+        [(ngModel)]="user.passw" #userPassw="ngModel" required />
+      <div *ngIf="userPassw.invalid && !userPassw.untouched" class="alert alert-danger">
+        Senha deve ser informado
+      </div>
+    </div>
+
+    <button type="button" [disabled]="userLogin.invalid || userPassw.invalid" class="btn btn-success"
+      (click)="login()">Acessar</button>
+    <button type="button" class="btn btn-primary" [routerLink]="['/register']" style="margin: 3px;">Registra-se</button>
+  </div>
+</form>

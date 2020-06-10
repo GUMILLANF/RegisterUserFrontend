@@ -1,0 +1,26 @@
+<div class="container mt-3">
+    <p>
+        <label class="anuncio">ID : </label>
+        <label>{{user.id}}</label>
+    </p>
+    <p>
+        <label class="anuncio">Login : </label>
+        <label>{{user.login}}</label>
+    </p>
+    <p>
+        <label class="anuncio">Email : </label>
+        <label>{{user.email}}</label>
+    </p>
+    <p>
+        <label class="anuncio">Nome : </label>
+        <label>{{user.name}}</label>
+    </p>
+    <p>
+        <label class="anuncio">Data de Cadastro : </label>
+        <label>{{user.registrationDate | date: 'dd/MM/yyyy hh:mm:ss'}}</label>
+    </p>
+    <p>
+        <label class="anuncio">Data de Validação : </label>
+        <label>{{user.validationDate | date: 'dd/MM/yyyy hh:mm:ss'}}</label>
+    </p>
+</div>

@@ -1,0 +1,9 @@
+form {
+    padding: 10% 30% 10% 30%;
+}
+
+#log {
+    border-style: solid;
+    padding: 3%;
+    background-color: honeydew;
+}

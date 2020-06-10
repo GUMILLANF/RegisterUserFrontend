@@ -1,0 +1,13 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" [hidden]="esconderBarra()">
+    <a class="navbar-brand" href="home">{{ title }}</a>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <button type="button" class="btn btn-danger" (click)="sair()">Sair</button>
+      </form>
+    </div>
+  </nav>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,2 @@
+<app-validated-user [user]="user" *ngIf="validatedUser()"></app-validated-user>
+<app-unverified-user [user]="user" *ngIf="!validatedUser()"></app-unverified-user>
